@@ -8,15 +8,6 @@ var numeral = require('numeral');
 
 const request = promisifyAgent(agent, Bluebird);
 
-
-function compara(aNum,nVal){
-    if (aNum[0] == nVal || aNum[1] == nVal || aNum[2] == nVal || aNum[3] == nVal || aNum[4] == nVal || aNum[5] == nVal){
-        return 1;
-    }else{
-        return 0;
-    }
-}
-
 function render(proxConcurso,estimativaPremio,dtProximo){
     return _("Proximo concurso {{proxConcurso}} com premio estimado de R$ {{estimativaPremio}} em {{dtProximo}}",
         {proxConcurso, estimativaPremio, dtProximo});
